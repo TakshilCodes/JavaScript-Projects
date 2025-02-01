@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.lightmode{
+    background-color: #fff;
+    color: #000;
+}
+
+.darkmodetoggle{
+    display: inline;
+    padding: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#theme-switch{
+    border: none;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    background: none;
+}
+
+#clock-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#clock{
+    font-size: 5em;
+    font-family: "Poppins", serif;
+}

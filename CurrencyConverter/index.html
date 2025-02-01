@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <form>
+            <!-- Amount Section -->
+            <div class="amount">
+                <p>Enter Amount</p>
+                <input type="text" id="amount" value="1" />
+            </div>
+
+            <!-- Dropdown Section -->
+            <div class="dropdown">
+                <!-- From Currency -->
+                <div class="form">
+                    <p>From</p>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/US/flat/64.png" alt="From Flag">
+                        <select id="from-currency">
+                            <option value="usd">USD</option>
+                            <option value="eur">EUR</option>
+                            <option value="inr">INR</option>
+                            <option value="aud">AUD</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Exchange Icon -->
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                <!-- To Currency -->
+                <div class="to">
+                    <p>To</p>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/IN/flat/64.png" alt="To Flag">
+                        <select id="to-currency">
+                            <option value="inr">INR</option>
+                            <option value="usd">USD</option>
+                            <option value="eur">EUR</option>
+                            <option value="aud">AUD</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exchange Rate and Button -->
+            <div id="exchange-rate" class="msg">Exchange Rate will appear here.</div>
+            <button type="button" id="convert-btn">Get Exchange Rate</button>
+        </form>
+    </div>
+
+    <script src="codes.js"></script>
+    <script src="script.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/56c242ba0b.js" crossorigin="anonymous"></script>
+</body>
+</html>

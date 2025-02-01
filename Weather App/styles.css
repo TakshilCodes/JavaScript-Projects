@@ -1,0 +1,212 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1D3557, #457B9D); /* Cool oceanic blue gradient */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Main Header Styling */
+.mainHeader {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.mainHeader h1 {
+    font-size: 48px;
+    color: #F8FAFC; /* Fallback color */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(90deg, #00C9FF, #92FE9D); /* Gradient background */
+    background-clip: text; /* Clip the gradient to the text */
+    color: transparent; /* Make text transparent to show gradient */
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Weather Form Styling */
+.weatherForm {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    margin-top: 40px; /* Add gap below the header */
+    opacity: 0; /* Start with invisible form */
+    animation: slideIn 1s ease-in-out forwards; /* Form animation */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Starts slightly below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Moves into position */
+    }
+}
+
+.cityInput {
+    padding: 14px;
+    font-size: 16px;
+    border: 2px solid #A8DADC;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #F1FAEE;
+    color: #1D3557;
+}
+
+.cityInput::placeholder {
+    color: #888;
+}
+
+.weatherForm button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #E63946, #F3722C); /* Bright gradient button */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.weatherForm button:hover {
+    background: linear-gradient(135deg, #C02C3C, #E65C20); /* Darker hover gradient */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Card Styling */
+.card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    align-items: center;
+    gap: 15px; /* Add spacing between items */
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Card Heading (h1) */
+.card h1 {
+    font-size: 40px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Optional shadow for depth */
+    background: linear-gradient(90deg, #FF6F91, #FF9671); /* Gradient background */
+    background-clip: text; /* Clips the gradient to the text */
+    color: transparent; /* Fallback for unsupported browsers */
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+/* Card Items (p) */
+.card p {
+    font-size: 18px;
+    color: #EAF4F4; /* Light cyan for readability */
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 12px;
+    text-align: center;
+    letter-spacing: 0.7px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* Ensure paragraphs take full width */
+    margin-top: 20px; /* Added margin for all <p> items */
+}
+
+.card p:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Description */
+.descDisplay {
+    font-size: 16px;
+    font-style: italic;
+    color: #D1E8E2; /* Softer text for descriptions */
+    margin-top: 20px; /* Ensure consistent spacing */
+}
+
+/* Weather Emoji */
+.weatherEmoji {
+    font-size: 60px;
+    color: #FFDD00; /* Bright gold for emoji */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    margin-top: 20px; /* Added margin-top */
+}
+
+
+.errorDisplay {
+    color: #FF4D4D; /* Bold red for errors */
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Add subtle animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card h1, .card p, .weatherEmoji {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .cityInput {
+        width: 200px;
+    }
+
+    .card {
+        width: 90%;
+        padding: 20px;
+    }
+}

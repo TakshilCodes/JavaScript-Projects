@@ -1,0 +1,89 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* App Background */
+  .app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #001f54;
+  }
+  
+  /* Quiz Container */
+  .quiz {
+    background: #fff;
+    width: 400px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Quiz Title */
+  .quiz h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  /* Question */
+  #question {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  /* Options Styling */
+  .option {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .option:hover {
+    background-color: #eee;
+  }
+  
+  .option.correct {
+    border-color: green;
+    background-color: lightgreen;
+  }
+  
+  .option.incorrect {
+    border-color: red;
+    background-color: lightcoral;
+  }
+  
+  /* Next Button */
+  #next-btn {
+    display: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #001f54;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #next-btn:hover {
+    background-color: #003080;
+  }
+  

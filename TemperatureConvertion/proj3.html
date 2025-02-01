@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature conversion</title>
+    <link rel="stylesheet" href="proj3.css">
+</head>
+<body>
+
+<div class="main">
+
+    <h1>Temperature conversion:</h1>
+    <input type="number" id="textbox" value="0"><br>
+
+    <input type="radio" id="tofer" value="0">
+    <label for="tofer">Celsius ➡ Fehrenheit</label><br>
+
+    <input type="radio" id="tocel" value="0">
+    <label for="tofer">Fehrenheit ➡ Celsius</label><br>
+
+    <button id="subbtn" onclick="convert()">Submit</button>
+    <p id="result"></p>
+
+</div>
+
+<script src="proj3.js"></script>
+</body>
+</html>
