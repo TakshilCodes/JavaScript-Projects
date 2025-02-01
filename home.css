@@ -1,0 +1,156 @@
+/* Define CSS Variables in :root */
+:root {
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --header-color: #007bff;
+    --section-heading-color: #444;
+    --card-background-color: #ffffff;
+    --card-box-shadow: rgba(0, 0, 0, 0.1);
+    --card-hover-box-shadow: rgba(0, 0, 0, 0.15);
+    --button-background-color: #007bff;
+    --button-hover-background-color: #0056b3;
+    --button-text-color: #fff;
+}
+
+.darkmode {
+    --background-color: #121212;
+    --text-color: #fff;
+    --header-color: #007bff;
+    --section-heading-color: #fff;
+    --card-background-color: #1e1e1e;
+    --card-box-shadow: rgba(0, 0, 0, 0.6);
+    --card-hover-box-shadow: rgba(0, 0, 0, 0.8);
+    --button-background-color: #007bff;
+    --button-hover-background-color: #0056b3;
+    --button-text-color: #fff;
+}
+
+.darkmodetoggle{
+    display: inline;
+    padding: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#theme-switch{
+    border: none;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+.head {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.head span {
+    color: var(--header-color);
+}
+
+/* Section Headings */
+.basic {
+    text-align: center;
+    font-size: 2rem;
+    margin: 30px 0 20px;
+    color: var(--section-heading-color);
+}
+
+/* Project Container */
+.Display-project {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 1200px;
+}
+
+/* Individual Project Card */
+.proj {
+    background-color: var(--card-background-color);
+    box-shadow: 0 4px 8px var(--card-box-shadow);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proj:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--card-hover-box-shadow);
+}
+
+/* Project Title */
+.br1 p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Project Image */
+.br1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Navigation Button */
+nav a {
+    display: block;
+    text-align: center;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    width: fit-content;
+}
+
+nav a:hover {
+    background-color: var(--button-hover-background-color);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .head {
+        font-size: 2.5rem;
+    }
+
+    .basic {
+        font-size: 1.8rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+}
